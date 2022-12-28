@@ -3,11 +3,18 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'echo "Hello World"'
-                sh '''
+
+                retry(3) {
+                    sh 'echo "Hello World"'
+                    sh '''
                     echo "Multiline shell steps works too"
                     ls -lah
-                '''
+                    '''
+                    }
+                 timeout(time: 3, unit: 'MINUTES') {
+                    sh 'free -h'
+                }
+                
             }
         }
     }
