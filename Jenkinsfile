@@ -1,14 +1,14 @@
 pipeline {
     agent any
     parameters {
-        [        
+          
         string(
             defaultValue: 'scriptcrunch', 
             name: 'STRING-PARAMETER', 
             trim: true
         )
 
-        ]
+        
         
 
 
