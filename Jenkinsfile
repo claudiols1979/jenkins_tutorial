@@ -21,7 +21,7 @@ pipeline {
                 expression { params.STRING-PARAMETER == 'Claukss' }
             }
             steps {
-                echo "Hello, ${STRING-PARAMETER}"
+                echo "Hello, params.STRING-PARAMETER"
             }
         }
     }
