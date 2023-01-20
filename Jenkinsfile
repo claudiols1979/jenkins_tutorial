@@ -4,7 +4,7 @@ pipeline {
         choice(
             choices: ['greeting' , 'silence'],
             description: '',
-            name: 'REQUESTED_ACTION'),
+            name: 'REQUESTED_ACTION')
 
         text(
             defaultValue: '''
@@ -12,7 +12,7 @@ pipeline {
             string parameter example
                            ''', 
             name: 'MULTI-LINE-STRING'
-        ),
+        )
         string(
             defaultValue: 'scriptcrunch', 
             name: 'STRING-PARAMETER', 
