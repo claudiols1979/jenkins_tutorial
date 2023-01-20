@@ -18,10 +18,10 @@ pipeline {
         stage ('Speak') {
             when {
                 // Only say hello if a "greeting" is requested
-                expression { params.REQUESTED_ACTION == 'greeting' }
+                expression { params.STRING-PARAMETER == 'Claukss' }
             }
             steps {
-                echo "Hello, Claukss!"
+                echo "Hello, ${STRING-PARAMETER}"
             }
         }
     }
