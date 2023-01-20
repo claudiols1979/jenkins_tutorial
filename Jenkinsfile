@@ -3,13 +3,10 @@ pipeline {
     parameters {
           
         string(
-            defaultValue: 'scriptcrunch', 
+            defaultValue: '', 
             name: 'STRING-PARAMETER', 
             trim: true
-        )
-
-        
-        
+        )        
 
 
     }
@@ -17,7 +14,7 @@ pipeline {
     stages {
         stage ('Speak') {
             when {
-                // Only say hello if a "greeting" is requested
+                
                 expression { params.STRING-PARAMETER == 'Claukss' }
             }
             steps {
