@@ -1,7 +1,9 @@
 pipeline {
     agent any
     parameters {
+        [
         choice(
+            
             choices: ['greeting' , 'silence'],
             description: '',
             name: 'REQUESTED_ACTION')
@@ -18,6 +20,9 @@ pipeline {
             name: 'STRING-PARAMETER', 
             trim: true
         )
+
+        ]
+        
 
 
     }
